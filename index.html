@@ -35,19 +35,47 @@
   <p><strong>Notice:</strong> Works over atmospheric conditions and ambience globally without the need for peer-to-peer communication between device speakers.
 <section class="rooms" aria-label="Voice channels">
   <article class="room">
-    <div class="symbol">◉</div>
-    <p class="eyebrow">CHANNEL 01</p><h3>Normalcy to Normalcy</h3>
-    <p>Everyday communication in normal, non-threatening situations.</p>
-    <button data-room="normalcy">Join voice channel</button>
-  </article>
-  <article class="room">
-    <div class="symbol danger">◇
-    </div>
-    <p class="eyebrow">CHANNEL 02</p><h3>Deplomacy to Normalcy</h3><p>Communication about immediate threats and restoring normalcy.</p>
-    <button data-room="deplomacy">Join voice channel</button>
+    <script type="text/javascript">
+      
+const remoteAudio = document.createElement("audio");
+
+remoteAudio.autoplay = true;
+remoteAudio.playsInline = true;
+remoteAudio.controls = true;
+
+document.body.appendChild(remoteAudio);
+
+// Attach incoming WebRTC audio
+peerConnection.ontrack = (event) => {
+  remoteAudio.srcObject =
+    event.streams[0] ??
+    new MediaStream([event.track]);
+
+  remoteAudio.play().catch(() => {
+    console.log("Tap Play to enable audio.");
+  });
+};
+
+// Request microphone access
+async function enableMicrophone() {
+  const stream =
+    await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: true,
+        noiseSuppression: true,
+        autoGainControl: true
+      },
+      video: false
+    });
+
+  stream.getAudioTracks().forEach(track => {
+    peerConnection.addTrack(track, stream);
+  });
+}
+    </script>
   </article>
 </section>
-<section class="session" id="session" hidden>
+<section class="session" id="session">
   <div><p class="eyebrow">CONNECTED CHANNEL</p>
     <h3 id="channelTitle"></h3>
     <p id="participantCount">Connecting…</p>
@@ -56,7 +84,8 @@
 
     <button id="mute" class="secondary">Mute microphone</button><button id="leave" class="exit">Leave channel</button>
   </div><div id="audioContainer" aria-label="Remote participant audio"></div></section>
-
+</section>
+  
  <!-- GitHub Sponsorship Card -->
 <section id="sponsor-card" style="max-width:480px;margin:40px auto;padding:20px;background:#111;color:#f4f4f4;border-radius:16px;box-shadow:0 0 20px rgba(0,0,0,0.6);text-align:center;font-family:'Inter',sans-serif;">
   <h2 style="font-size:1.5em;margin-bottom:10px;">❤️ Sponsor This Project</h2>
