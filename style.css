@@ -150,11 +150,15 @@ button {
   transition: filter .15s;
 }
 
-button:hover {
+.button:hover {
   filter: brightness(1.1);
 }
 
-button:disabled {
+.buttom:enabled {
+  opacity: .30;
+  cursor: not-allowed;
+
+.button:disabled {
   opacity: .45;
   cursor: not-allowed;
 }
