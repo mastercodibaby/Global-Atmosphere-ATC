@@ -1,0 +1,23 @@
+{
+  "name": "global-atmosphere-atc-server",
+  "version": "1.0.0",
+  "description": "Anonymous WebRTC voice communication and WebSocket signaling for Global Atmosphere ATC",
+  "type": "commonjs",
+  "main": "server.js",
+  "files": ["server.js", "public/", "README.md", "LICENSE"],
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js",
+    "prepack": "npm run check"
+  },
+  "engines": {"node": ">=20"},
+  "dependencies": {"ws": "8.18.3"},
+  "author": {"name": "mastercodibaby", "email": "master.codi.baby@gmail.com"},
+  "license": "MIT",
+  "repository": {"type": "git", "url": "git+https://github.com/mastercodibaby/Global-Atmosphere-ATC.git"},
+  "homepage": "https://mastercodibaby.github.io/Global-Atmosphere-ATC/",
+  "bugs": {"url": "https://github.com/mastercodibaby/Global-Atmosphere-ATC/issues"},
+  "keywords": ["global-atmosphere", "atc", "voice", "webrtc", "websocket", "signaling", "voice-channels"],
+  "publishConfig": {"registry": "https://registry.npmjs.org/", "access": "public"}
+}
