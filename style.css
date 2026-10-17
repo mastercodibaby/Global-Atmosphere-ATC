@@ -150,19 +150,6 @@ h3 {
   transition: filter .15s;
 }
 
-button:hover {
-  filter: brightness(1.1);
-}
-
-buttom:enabled {
-  opacity: .30;
-  cursor: not-allowed;
-
-button:disabled {
-  opacity: .45;
-  cursor: not-allowed;
-}
-
 .session {
   margin-top: 22px;
   border-color: #4d7d92;
