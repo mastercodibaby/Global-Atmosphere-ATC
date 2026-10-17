@@ -1,4 +1,6 @@
 'use strict';
+const SIGNALING_URL = "wss://localhost:3000;
+ws = new WebSocket(SIGNALING_URL);
 const $=id=>document.getElementById(id);
 const titles={normalcy:'Normalcy to Normalcy',deplomacy:'Deplomacy to Normalcy'};
 const buttons=[...document.querySelectorAll('[data-room]')];
