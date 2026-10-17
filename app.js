@@ -1,12 +1,11 @@
 'use strict';
-const SIGNALING_URL = "wss://localhost:3000;
-ws = new WebSocket(SIGNALING_URL);
 const $=id=>document.getElementById(id);
 const titles={normalcy:'Normalcy to Normalcy',deplomacy:'Deplomacy to Normalcy'};
 const buttons=[...document.querySelectorAll('[data-room]')];
 const peers=new Map();
 let ws=null,stream=null,room=null,selfId=null,muted=false;
 // STUN is for peer discovery. For reliable cross-network connectivity, configure a TURN server.
+const iceServers=[{urls:'stun:stun.l.google.com:19302'}];
 function status(s){$('status').textContent=s;}
 function count(){ $('participantCount').textContent=`${peers.size+1} participant${peers.size===0?'':'s'} including you`; }
 function send(obj){if(ws&&ws.readyState===WebSocket.OPEN)ws.send(JSON.stringify(obj));}
