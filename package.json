@@ -1,9 +1,14 @@
 {
-  "name": "global-atmosphere-voice",
+  "name": "global-atmosphere-atc-server",
   "version": "1.0.0",
   "private": true,
-  "description": "Independent, no-login WebRTC voice rooms",
-  "scripts": {"start": "node server.js"},
-  "dependencies": {"ws": "^8.18.0"},
-  "engines": {"node": ">=20"}
+  "description": "Anonymous WebRTC signaling for Global Atmosphere ATC",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js"
+  },
+  "dependencies": { "ws": "8.18.3" }
 }
