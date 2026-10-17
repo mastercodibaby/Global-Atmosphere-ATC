@@ -1,0 +1,12 @@
+.github/
+.git/
+Host/
+Host/SSH/
+*.ini
+npm.npmrc
+.env
+.env.*
+!.env.example
+node_modules/
+coverage/
+*.log
