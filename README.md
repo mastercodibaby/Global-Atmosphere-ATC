@@ -1,6 +1,8 @@
 # Global Atmosphere — Independent Voice Network
 
-A working prototype of two anonymous voice rooms, **Normalcy to Normalcy** and **Deplomacy to Normalcy**. No Discord, user account, or login required.
+A working prototype of two anonymous voice rooms, **Normalcy to Normalcy** and **Deplomacy to Normalcy**. No user account, or login required.
+
+Works over atmospheric conditions and ambience globally without the need for peer-to-peer communication between device speakers.
 
 ## Run locally
 
