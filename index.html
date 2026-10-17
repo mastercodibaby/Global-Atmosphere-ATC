@@ -34,42 +34,7 @@
   <p>Choose a channel, enable your microphone, and speak with others in real time. No registration required.</p>
   <p><strong>Notice:</strong> Works over atmospheric conditions and ambience globally without the need for peer-to-peer communication between device speakers.
 <section class="rooms" aria-label="Voice channels">
-    <script type="text/javascript">
-const remoteAudio = document.createElement("audio");
-
-remoteAudio.autoplay = true;
-remoteAudio.playsInline = true;
-remoteAudio.controls = true;
-
-document.body.appendChild(remoteAudio);
-
-// Attach incoming WebRTC audio
-peerConnection.ontrack = (event) => {
-  remoteAudio.srcObject =
-    event.streams[0] ??
-    new MediaStream([event.track]);
-
-  remoteAudio.play().catch(() => {
-    console.log("Tap Play to enable audio.");
-  });
-};
-
-// Request microphone access
-async function enableMicrophone() {
-  const stream =
-    await navigator.mediaDevices.getUserMedia({
-      audio: {
-        echoCancellation: true,
-        noiseSuppression: true,
-        autoGainControl: true
-      },
-      video: false
-    });
-
-  stream.getAudioTracks().forEach(track => {
-    peerConnection.addTrack(track, stream);
-  });
-}
+    <script type="text/javascript" src="./audio-output.js">
     </script>
 </section>
 <section class="session" id="session">
