@@ -1,7 +1,7 @@
 /* Add this script to your GitHub Pages site and call GlobalAtmosphere.join(room). */
 window.GlobalAtmosphere = (() => {
   // REPLACE with the public HTTPS URL of your deployed Node.js server.
-  const SERVER_URL = 'https://YOUR-SERVER-HOST.example';
+  const SERVER_URL = 'https://localhost:3000';
   const ICE_SERVERS = [{ urls: 'stun:stun.l.google.com:19302' }];
   let ws, stream, myId, room;
   const connections = new Map();
