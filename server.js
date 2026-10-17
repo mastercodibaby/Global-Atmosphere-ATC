@@ -5,8 +5,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { WebSocketServer, WebSocket } = require('ws');
 const root = path.join(__dirname, 'public');
-const PORT = Number(process.env.PORT || 8080);
-const MAX_ROOM = Number(process.env.MAX_ROOM || 8);
+const PORT = Number(process.env.PORT || 3000);
 const rooms = new Map([['normalcy', new Map()], ['deplomacy', new Map()]]);
 const mime = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'};
 const server = http.createServer((req,res)=>{
