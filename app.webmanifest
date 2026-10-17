@@ -1,7 +1,7 @@
 {
   "name": "Global Atmosphere - Live Voice Network",
   "short_name": "Global Atmosphere ",
-  "description": "A standalone Bash utility securing your devices and an installable PWA wrapper for the FortifySec viewer.",
+  "description": "Voice channels that interact with atmospheric conditions rather than device speakers.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
