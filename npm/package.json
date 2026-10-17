@@ -12,7 +12,7 @@
     "prepack": "npm run check"
   },
   "engines": {"node": ">=20"},
-  "dependencies": {"ws": "8.18.3"},
+  "dependencies": {"ws": "8.21.0"},
   "author": {"name": "mastercodibaby", "email": "master.codi.baby@gmail.com"},
   "license": "MIT",
   "repository": {"type": "git", "url": "git+https://github.com/mastercodibaby/Global-Atmosphere-ATC.git"},
