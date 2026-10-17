@@ -1,0 +1,3 @@
+User-agent: *
+Allow: ./
+Sitemap: https://mastercodibaby.github.io/Global-Atmosphere-ATC/sitemap.xml
