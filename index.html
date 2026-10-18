@@ -9,6 +9,11 @@
     <meta name="aplicatiom-name" content="Global Atmosphere Voice Channel Service">
   <link rel="icon" sizes="512x512" href="./icon-512x512.png">
 <link rel="manifest" href="./app.webmanifest">
+<link rel="preload" href="./sw.js" as="script">
+<link rel="preload" href="./script.js" as="script">
+<link rel="preload" href="./server.js" as="script">
+<link rel="preload" href="./voice-client.js" as="script">
+<link rel="preload" href="./audio-output.js" as="script">
 <link rel="preload" href="./package.json" as="fetch">
   </head>
 <body>
@@ -87,5 +92,5 @@ By using this program, you agree to take full responsibility for its operation a
 </section>
   
   </footer>
-    </body>
+    <script src="./app.js" defer></script></body>
   </html>
