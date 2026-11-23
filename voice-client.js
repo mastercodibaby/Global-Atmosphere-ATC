@@ -1,7 +1,7 @@
 /* Add this script to your GitHub Pages site and call GlobalAtmosphere.join(room). */
 window.GlobalAtmosphere = (() => {
   // REPLACE with the public HTTPS URL of your deployed Node.js server.
-  const SERVER_URL = 'http://localhost:3000';
+  const SERVER_URL = 'http://localhost';
   let ws, stream, myId, room;
   const connections = new Map();
   const send = data => { if (ws?.readyState === WebSocket.OPEN) ws.send(JSON.stringify(data)); };
